@@ -45,12 +45,19 @@ recommendations to the bank on the important features to consider while approvin
 
 - **Our goal was to provide a machine learning algorithm able to predict borrowers that would default** based on the dataset provided, **which we're doing successfully 7.5 times out of 10**.
 - **Our model had to be interpretable, and we have at hand a very clear plot of the decision tree** (see below), that any business executive would understand.
-- **It's also lear what features are impacting the outcome of the classification **which is key for the bank due to government regulations.
+- **It's also clear what features are impacting the outcome of the classification** which is key for the bank due to government regulations.
+
+#  
 
 **_Our Final Decision Tree:_** 
+<br/><br/>
 ![Decision Tree_Capstone Project](https://github.com/pacifiq-hub/Loan-Default-Prediction-Decision-Trees/assets/46910395/e25a3a2f-1464-42a6-9f79-494a6daf3170)
+<br/><br/>
+
+# 
 
 **_And its features of importance:_** 
+<br/><br/>
 ![Decision Tree_Features of importance_Capstone project](https://github.com/pacifiq-hub/Loan-Default-Prediction-Decision-Trees/assets/46910395/5886809b-63f8-41bc-ba87-52a8ee37c155)
 
 
@@ -90,3 +97,14 @@ recommendations to the bank on the important features to consider while approvin
 9. **A less important element but still worth mentioning, is that the home property value variable and the outstanding mortgage due are very correlated, and so together don't add more value to our problem**
 
 > **If the bank has the ability to switch one of these variables for other ones, such as more socio-economic criteria on the borrower (e.g., salary, age, address), we would want to do it.** It seems the dataset comes from the Home Equity dataset (HMEQ), that might be a discussion to have with them.
+
+## ![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png) Further analysis
+
+- We will monitor consistency of our recall performance on new unseen data which will require to get fresh unseen data. We will also run hypothesis testing on this performance metric to ensure it is robust and significant.
+- We will run cross-validation to ensure consistency and stabilization of features of importance over time on different training datasets which is key to the bank.
+- We also might be able to get more data points or new features in the future with our yearly budget of $100k, that would likely help improving the quality of the model.
+- We didn't try a clustering method on that dataset due to the many outliers that would potentially decrease significantly the quality of our clusters. There are great clustering techniques though that we could still try.
+- There are other complex decision tree alternatives such as the Adaboost or neural network decision trees that we could try. These would be interesting to compare to our more sophisticated XG Boost model even though their interpretability will still be a challenge for implementation at the bank.
+- We corrected the imbalance of the dataset with weighting in all our models. There are other techniques that we could try such as SMOTE algorithm, which stands for Synthetic Minority Over-sampling Technique, that is able to "synthetize" data points thanks to closest neighbors features. This eventually balances the dataset artificially and lets the model learn on a perfectly balanced dataset.
+
+For more information
