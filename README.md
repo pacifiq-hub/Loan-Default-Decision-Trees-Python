@@ -107,4 +107,5 @@ recommendations to the bank on the important features to consider while approvin
 - There are other complex decision tree alternatives such as the Adaboost or neural network decision trees that we could try. These would be interesting to compare to our more sophisticated XG Boost model even though their interpretability will still be a challenge for implementation at the bank.
 - We corrected the imbalance of the dataset with weighting in all our models. There are other techniques that we could try such as SMOTE algorithm, which stands for Synthetic Minority Over-sampling Technique, that is able to "synthetize" data points thanks to closest neighbors features. This eventually balances the dataset artificially and lets the model learn on a perfectly balanced dataset.
 
-For more information
+For more information, you may [read the final report submitted with the Python script in this repository](https://github.com/pacifiq-hub/Loan-Default-Prediction-Decision-Trees/blob/main/Final%20Report_Loan%20Default%20Prediction_MFriederich.pdf) 
+#  
