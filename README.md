@@ -15,6 +15,46 @@ behavior (rejections).
 Build a classification model to predict clients who are likely to default on their loan and give
 recommendations to the bank on the important features to consider while approving a loan.
 
+## ![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png) Proposed final solution
+
+**_Comparison of performance for all machine learning models tested:_**
+
+![image](https://github.com/pacifiq-hub/Loan-Default-Prediction-Decision-Trees/assets/46910395/a220ca3e-bb36-4491-be60-a89486ad71ba)
+
+- **Based on the comparison, the best model in terms of performance is the XG Boost tuned classifier** that yielded the best recall score at 87% while showing no signs of overfitting.
+- **But we've decided to choose the decision tree model though because it also yields a good recall score at almost 75%, an overall accuracy of 87%, but mostly consistency the features of importance.** It also generalized very well from train to test datasets.
+- **We also like the interpretability of the decision tree that can be plotted when the XG boost is much harder to explain** and might create some concerns to the bank for the consistency of results.
+- **Also the XG boost has much more randomness to it in the way it selects features and the number of times it selects them**, which also in turn impacts the way the algorithm converges to the optimal solution and the scores it provides to the features of importance. That can be controlled by seed or random_state parameters in XG Boost library, but it could make the bank business team uncomfortable in using such a complex model theoretically.
+- **For that reason, we play the conservative card here**. We do have a difference of 12 pts in the recall score with our single decision tree, but that in turn gives us interpretability in the results and clarity to our bank decision makers and customers on the reasons of rejection.
+
+**_Let's recap the pros of our model:_**
+
+- **Simplicity**: It yields intuitive results that can be visualized and explained very easily. The model is also simple and will be applied on the overall set of features instead of randomly picked features across several trees.
+- **No need for data preprocessing**: our decision tree require relatively little data preparation compared to the logistic regression that required us to scale the data. Our decision tree is also not affected by outliers and missing values to the extent that our logistic regression would be (or other clustering techniques).
+- **Feature selection**: our decision tree inherently performed feature selection, using the most informative features first. This was not a major advantage here as the dataset is small, but in bigger datasets with many columns, the decision tree proves very useful at removing non-impactful features.
+- **Good generalization to the test dataset**: Even though decision trees can overfit by creating overly complex trees that don't generalize well to new test datasets, here our tuning helped prune the tree to prevent overfitting.
+- **Computation**: Our model computes very fast because it is only calculating one single decision tree, vs. the XG boost or random forest calculate several trees (to note that the XG Boost is much faster to compute than the random forest).
+
+**_Let's recap the cons of our model:_**
+
+- **Performance**: By being more conservative and focused on interpretability, we are also losing 12 points in the recall rate compared to the XG Boost, so performance here is definitely lowered. That's more than 1 person out of 10 we won't be able to detect as future defaulters because of our choice.
+- **Reliance on the debt-to-income**: let's remind the debt-to-income ratio represents 80% of the importance in our mode, and that 20% of the values for that variable were missing. Definitely a risk here. The XG Boost was more balanced between the different features regarding their impact on the model.
+- **Bias towards features with more levels**: Decision trees can be biased towards variables with more levels. Features with more unique values or categories may be favored over others, potentially leading to suboptimal trees.
+
+**_How that solves the problem?_**
+
+- **Our goal was to provide a machine learning algorithm able to predict borrowers that would default** based on the dataset provided, **which we're doing successfully 7.5 times out of 10**.
+- **Our model had to be interpretable, and we have at hand a very clear plot of the decision tree** (see below), that any business executive would understand.
+- **It's also lear what features are impacting the outcome of the classification **which is key for the bank due to government regulations.
+
+**_Our Final Decision Tree:_** 
+![Decision Tree_Capstone Project](https://github.com/pacifiq-hub/Loan-Default-Prediction-Decision-Trees/assets/46910395/e25a3a2f-1464-42a6-9f79-494a6daf3170)
+
+**_And its features of importance:_** 
+![Decision Tree_Features of importance_Capstone project](https://github.com/pacifiq-hub/Loan-Default-Prediction-Decision-Trees/assets/46910395/5886809b-63f8-41bc-ba87-52a8ee37c155)
+
+
+
 ## ![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png) Refined insights
 
 1. **We built a classifier model that can predict if a customer applying for a loan will default or not with** an f-1 score of 70%, **a recall of 75%** and an overall accuracy of 87%.
