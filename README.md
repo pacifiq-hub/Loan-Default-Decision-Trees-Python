@@ -1,5 +1,7 @@
 # Loan-Default-Prediction-Decision-Trees
 
+The _Applied Data Science Program: Leveraging AI for Effective Decision-Making_  is an intensive program covering courses of supervised and unsupervised learning, neural networks, graphs, decision trees, generative AI and recommendation systems focusing on theory, Python coding and application to different industries. It is thought by MIT professors, Munther Dahleh, Caroline Uhler, John N. Tsitsiklis, Stefanie Jegelka and Devavrat Shah. This GitHub repository consolidates my final Python script and report as well as main conclusions presented below that I submitted in the final step of the program, the _Capstone project_.  
+
 ## ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Problem Statement 
 
 A bank's consumer credit department aims to simplify the decision-making process for home equity
@@ -49,7 +51,7 @@ recommendations to the bank on the important features to consider while approvin
 
 #  
 
-**_Our Final Decision Tree:_** 
+**_Final Decision Tree:_** 
 <br/><br/>
 ![Decision Tree_Capstone Project](https://github.com/pacifiq-hub/Loan-Default-Prediction-Decision-Trees/assets/46910395/e25a3a2f-1464-42a6-9f79-494a6daf3170)
 <br/><br/>
