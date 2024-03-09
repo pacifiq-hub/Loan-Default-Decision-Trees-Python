@@ -2,7 +2,7 @@
 
 The [_Applied Data Science Program: Leveraging AI for Effective Decision-Making_](https://professional.mit.edu/course-catalog/applied-data-science-program-leveraging-ai-effective-decision-making)  is an intensive program covering courses of supervised and unsupervised learning, neural networks, graphs, decision trees, generative AI and recommendation systems focusing on theory, Python coding and application to different industries. It is taught by MIT professors, Munther Dahleh, Caroline Uhler, John N. Tsitsiklis, Stefanie Jegelka and Devavrat Shah. This GitHub repository consolidates my final Python script and report as well as main conclusions presented below that I submitted in the final step of the 5-month program, the _Capstone project_.  
 
-[Click here to check the Python script](https://github.com/pacifiq-hub/Loan-Default-Prediction-Decision-Trees/blob/main/Capstone_Loan_Default_Prediction_MFriederich.ipynb) 
+[Click here to check the Python script](https://github.com/pacifiq-hub/Loan-Default-Decision-Trees-Python/blob/main/Capstone_Loan_Default_Prediction_MFriederich.ipynb) 
 
 ## ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Problem Statement 
 
@@ -111,5 +111,5 @@ recommendations to the bank on the important features to consider while approvin
 - There are other complex decision tree alternatives such as the Adaboost or neural network decision trees that we could try. These would be interesting to compare to our more sophisticated XG Boost model even though their interpretability will still be a challenge for implementation at the bank.
 - We corrected the imbalance of the dataset with weighting in all our models. There are other techniques that we could try such as SMOTE algorithm, which stands for Synthetic Minority Over-sampling Technique, that is able to "synthetize" data points thanks to closest neighbors features. This eventually balances the dataset artificially and lets the model learn on a perfectly balanced dataset.
 
-For more information, you may [read the final report submitted with the Python script in this repository](https://github.com/pacifiq-hub/Loan-Default-Prediction-Decision-Trees/blob/main/Final%20Report_Loan%20Default%20Prediction_MFriederich.pdf) 
+For more information, you may [read the final report submitted with the Python script in this repository](https://github.com/pacifiq-hub/Loan-Default-Decision-Trees-Python/blob/main/Final%20Report_Loan%20Default%20Prediction_MFriederich.pdf) 
 #  
